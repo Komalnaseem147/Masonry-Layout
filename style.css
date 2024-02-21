@@ -25,6 +25,12 @@
     display: column;
     columns: 3;
     gap: 1em;
+    margin-bottom: 1em;
+}
+
+.grid > * {
+  break-inside: avoid;
+  margin-bottom: 1em;
 }
 
 @supports(grid-template-rows: masonry){
@@ -33,6 +39,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: masonry;
   }
+}
+
+.feature{
+  grid-column: span 2;
 }
 
 body{
@@ -57,6 +67,7 @@ a{
 }
 
 .content{
+  display: grid;
   padding: 2em;
   box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
   background: white;
@@ -67,5 +78,7 @@ a{
   color: var(--clr-primary);
   line-height: 0.8;
 }
+
+
 
 
